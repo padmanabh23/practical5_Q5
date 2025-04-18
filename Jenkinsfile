@@ -3,7 +3,7 @@ agent any
 stages { 
 stage('Clone Repository') { 
 steps { 
-git branch: 'main', url: 'https://github.com/Admin/DO_Practical_5.git' 
+git branch: 'main', url: 'https://github.com/padmanabh23/practical5_Q5.git' 
 } 
 } 
 stage('Build Docker Image') { 
