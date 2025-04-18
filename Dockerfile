@@ -1,12 +1,13 @@
-FROM node:18-alpine
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-EXPOSE 4000
-
-CMD ["npm", "start"]
+# Use the official Node.js 18 image 
+FROM node:18 
+# Set the working directory 
+WORKDIR /app 
+# Copy package files and install dependencies 
+COPY package*.json ./ 
+RUN npm install 
+# Copy the rest of the app 
+COPY . . 
+# Expose the app port 
+EXPOSE 3000 
+# Run the app 
+CMD ["node", "app.js"]
